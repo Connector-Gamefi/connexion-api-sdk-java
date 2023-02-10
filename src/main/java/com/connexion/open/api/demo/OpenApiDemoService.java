@@ -1,23 +1,28 @@
-# Java SDK for Connextion API
+package com.connexion.open.api.demo;
 
-[![Maven](https://img.shields.io/badge/maven-3.8.4-blue)](http://www.connextion.com)
-![GitHub last commit](https://img.shields.io/github/last-commit/Connector-Gamefi/connexion-api-sdk-java)
-![GitHub top language](https://img.shields.io/github/languages/top/Connector-Gamefi/connexion-api-sdk-java?color=red)
+import cn.hutool.http.HttpRequest;
+import com.connexion.open.api.demo.constans.HeaderConstants;
+import com.connexion.open.api.demo.utils.SignUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
-# API Documentation
-- [Official documentation](https://)
+import java.util.HashMap;
+import java.util.Map;
 
-# Usage
-## Download and build
-```shell
-$ git clone https://github.com/Connector-Gamefi/connexion-api-sdk-java
-$ cd connexion-api-sdk-java
-$ mvn install -Dmaven.test.skip=true
-```
-## Test
+/**
+ * OpenApi 请求service示例
+ * @author connextion
+ */
+@Slf4j
+@Service
+public class OpenApiDemoService {
 
-## Test api request
-    ```java
+    //根据不同环境选择不同domain，此处为线上domain
+    private static final String OPEN_API_DOMAIN = "https://openapi.connexion.games";
+
+    /**
+     * Get 方式请求
+     */
     public void requestGetOpenApi(){
         //需要请求的接口
         String url = OPEN_API_DOMAIN.concat("/global/topList/roleLevel");
@@ -27,7 +32,7 @@ $ mvn install -Dmaven.test.skip=true
         //时间戳必填(此处是一个示例)实际参数为unix timestamp 秒级
         req.put("timestamp", 1675998834);
 
-        //你的API_KEY
+        //API_KEY、SECRET实际值请联系客服
         Map<String, String> headers = new HashMap<>();
         headers.put(HeaderConstants.API_KEY, "fa61655a1aca4804b5e2c3c7a10c6257");
         String signResult = SignUtils.sign((HashMap<String, Object>) req, "a05315753c2842598ee5daca4f7ef399");
@@ -38,6 +43,4 @@ $ mvn install -Dmaven.test.skip=true
         String res = HttpRequest.get(url).form(req).addHeaders(headers).execute().body();
         log.info(res);
     }
-    ```
-* JUnit
-  Execute `openApiTest` unit in `/src/test/java/com/connextion/open/api/demo/OpenApiDemoServiceTest.java` Java file
+}
