@@ -32,7 +32,7 @@ public class OpenApiDemoService {
         //时间戳必填(此处是一个示例)实际参数为unix timestamp 秒级
         req.put("timestamp", 1675998834);
 
-        //API_KEY、SECRET实际值请联系客服
+        //API_KEY、SECRET
         Map<String, String> headers = new HashMap<>();
         headers.put(HeaderConstants.API_KEY, "fa61655a1aca4804b5e2c3c7a10c6257");
         String signResult = SignUtils.sign((HashMap<String, Object>) req, "a05315753c2842598ee5daca4f7ef399");
