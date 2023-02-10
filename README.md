@@ -17,7 +17,7 @@ $ mvn install -Dmaven.test.skip=true
 ## Test
 
 ## Test api request
-    ```java
+    
     public void requestGetOpenApi(){
         //需要请求的接口
         String url = OPEN_API_DOMAIN.concat("/global/topList/roleLevel");
@@ -38,6 +38,6 @@ $ mvn install -Dmaven.test.skip=true
         String res = HttpRequest.get(url).form(req).addHeaders(headers).execute().body();
         log.info(res);
     }
-    ```
+    
 * JUnit
   Execute `openApiTest` unit in `/src/test/java/com/connextion/open/api/demo/OpenApiDemoServiceTest.java` Java file
