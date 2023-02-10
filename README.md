@@ -5,7 +5,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Connector-Gamefi/connexion-api-sdk-java?color=red)
 
 # API Documentation
-- [Official documentation](https://)
+- [Official documentation](https://doc.test.connector.games/openapi-cn/#45fa4e00db)
 
 # Usage
 ## Download and build
