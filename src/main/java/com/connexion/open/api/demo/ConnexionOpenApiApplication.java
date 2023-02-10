@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
  *  Program entry
- * @author connextion
+ * @author connexion
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class ConnexionOpenApiApplication

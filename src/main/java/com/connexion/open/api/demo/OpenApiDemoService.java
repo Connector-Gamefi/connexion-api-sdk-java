@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * OpenApi 请求service示例
- * @author connextion
+ * @author connexion
  */
 @Slf4j
 @Service

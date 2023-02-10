@@ -1,6 +1,6 @@
-# Java SDK for Connextion API
+# Java SDK for Connexion API
 
-[![Maven](https://img.shields.io/badge/maven-3.8.4-blue)](http://www.connextion.com)
+[![Maven](https://img.shields.io/badge/maven-3.8.4-blue)](https://connexion.games/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Connector-Gamefi/connexion-api-sdk-java)
 ![GitHub top language](https://img.shields.io/github/languages/top/Connector-Gamefi/connexion-api-sdk-java?color=red)
 
@@ -17,7 +17,6 @@ $ mvn install -Dmaven.test.skip=true
 ## Test
 
 ## Test api request
-    
     public void requestGetOpenApi(){
         //需要请求的接口
         String url = OPEN_API_DOMAIN.concat("/global/topList/roleLevel");
