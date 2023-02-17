@@ -29,7 +29,7 @@ $ mvn install -Dmaven.test.skip=true
         //Your API_KEY
         Map<String, String> headers = new HashMap<>();
         headers.put(HeaderConstants.API_KEY, "fa61655a1aca4804b5e2c3c7a10c6257");
-        //SignUtils can be used directly in the sample project Your secretKey
+        //SignUtils can be used directly in the sample project .The last signature parameter is yours secretKey
         String signResult = SignUtils.sign((HashMap<String, Object>) req, "a05315753c2842598ee5daca4f7ef399");
         headers.put(HeaderConstants.SIGNATURE_KEY, signResult);
         log.info(signResult);
