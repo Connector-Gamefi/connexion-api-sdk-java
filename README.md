@@ -5,7 +5,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Connector-Gamefi/connexion-api-sdk-java?color=red)
 
 # API Documentation
-- [Official documentation](https://doc.test.connector.games/openapi-cn/#45fa4e00db)
+- [Official documentation](https://docs.connexion.games/openapi-en)
 
 # Usage
 ## Download and build
@@ -18,22 +18,23 @@ $ mvn install -Dmaven.test.skip=true
 
 ## Test api request
     public void requestGetOpenApi(){
-        //需要请求的接口
+        //Request interface example
         String url = OPEN_API_DOMAIN.concat("/global/topList/roleLevel");
         Map<String, Object> req = new HashMap<>();
-        //请求参数
+        //Request parameters
         req.put("topNum", "5");
-        //时间戳必填(此处是一个示例)实际参数为unix timestamp 秒级
+        //Timestamp is required (here is an example). The actual parameter is unix timestamp in seconds
         req.put("timestamp", 1675998834);
 
-        //你的API_KEY
+        //Your API_KEY
         Map<String, String> headers = new HashMap<>();
         headers.put(HeaderConstants.API_KEY, "fa61655a1aca4804b5e2c3c7a10c6257");
+        //SignUtils can be used directly in the sample project Your secretKey
         String signResult = SignUtils.sign((HashMap<String, Object>) req, "a05315753c2842598ee5daca4f7ef399");
         headers.put(HeaderConstants.SIGNATURE_KEY, signResult);
         log.info(signResult);
-        //输出结果  40883fa6390c7060a874f2a310144af92586e7fe60ea9ae7adea4d4908146f94
-        //请求内容
+        //Sample Signature Result  40883fa6390c7060a874f2a310144af92586e7fe60ea9ae7adea4d4908146f94
+        //Interface request
         String res = HttpRequest.get(url).form(req).addHeaders(headers).execute().body();
         log.info(res);
     }
