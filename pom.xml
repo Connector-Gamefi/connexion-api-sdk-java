@@ -23,11 +23,11 @@
         <lombok.version>1.18.22</lombok.version>
     </properties>
 
-    <!-- 依赖声明 -->
+    <!-- Dependency management -->
     <dependencyManagement>
         <dependencies>
 
-            <!-- SpringBoot的依赖配置-->
+            <!-- Dependency configuration of spring boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -36,14 +36,14 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- io常用工具类 -->
+            <!-- Io Common tools -->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons.io.version}</version>
             </dependency>
 
-            <!-- 阿里JSON解析器 -->
+            <!-- Json parser -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -54,61 +54,61 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- Spring框架基本的核心工具 -->
+        <!-- Basic core tools of Spring framework -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
 
-        <!-- SpringWeb模块 -->
+        <!-- Spring Web Module -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
 
-        <!-- 自定义验证注解 -->
+        <!-- Validation framework -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!--常用工具类 -->
+        <!--Commons tools -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
 
-        <!-- JSON工具类 -->
+        <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
-        <!-- 阿里JSON解析器 -->
+        <!-- JSON parse -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
 
-        <!-- io常用工具类 -->
+        <!-- Io common tools -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
         </dependency>
 
-        <!-- servlet包 -->
+        <!-- servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
 
-        <!-- SpringBoot Web容器 -->
+        <!-- SpringBoot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- SpringBoot 拦截器 -->
+        <!-- SpringBoot aop -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
