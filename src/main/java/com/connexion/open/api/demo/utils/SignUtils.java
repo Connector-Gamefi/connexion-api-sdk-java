@@ -23,10 +23,10 @@ public class SignUtils {
     private static final String ALGORITHM = "HmacSHA256";
 
     /**
-     * 校验签名，
-     * 1、所有参数按照key的字母升序排序
-     * 2、对所有字段进行key=value&key1=value1拼接
-     * 5、最后对生成的字符串进行HmacSHA256签名
+     * check sign，
+     * 1、All parameters are sorted in ascending alphabetical order of key
+     * 2、Splice all fields with key=value&key1=value1
+     * 3、Finally, the generated string is signed by HmacSHA256
      *
      * @param params
      * @param secret
@@ -38,7 +38,7 @@ public class SignUtils {
     }
 
     /**
-     * 签名方法
+     * Sign method
      * @param params
      * @param secret
      * @return
